@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Chat privado</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="main.js"></script>
+        <style media="screen">
+
+            h1{
+                text-align: center;
+            }
+
+            #container{
+                width: 100%;
+                display: flex;
+                margin-left: 10%;
+                margin-right: 10%;
+
+
+            }
+            #user2{
+
+                width: 40%;
+                height: 350px;
+                overflow-y: scroll;
+                border: 1px solid black;
+                border-radius: 1px;
+            }
+            #user3{
+
+                width: 40%;
+                height: 350px;
+                overflow-y: scroll;
+                border: 1px solid black;
+                border-radius: 1px;
+            }
+            #inputs{
+                width: 100%;
+                margin-left:10%;
+                margin-right:10%;
+                height: 120px;
+            }
+            #id{
+                width: 12%;
+                padding: 9px;
+                position: absolute;
+            }
+
+            #texto{
+                width: 62%;
+            }
+
+            input[type=submit]{
+                margin-left: 12%;
+                position: absolute;
+                padding: 9px;
+                width: 5.6%;
+                background: green;
+                border: 2px solid green;
+            }
+        </style>
+    </head>
+    <body>
+
+            <h1>Chat Privado Con Node.js Y Socket.IO</h1>
+            <div id="container">
+                <div id="user2">Chat KIKA <hr></div>
+
+                <div id="user3">Chat DOGI <hr></div>
+
+            </div>
+            <div id="inputs">
+                <form onsubmit="return addMesage(this)">
+                    <textarea rows="2" cols="80" id="texto" placeholder="Escribe un mensaje aquí"></textarea>
+                    <select id="id">
+                        <option value="2">Kika</option>
+                        <option value="3">Dogi</option>
+                    </select>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+
+
+
+
+
+    </body>
+
+</html>
